@@ -19,6 +19,7 @@ const styles = theme => ({
   },
   menuIcon: {
     marginLeft: -theme.spacing.unit * 2,
+    color: theme.palette.common.white,
   },
   title: {
     flex: 1,
@@ -38,13 +39,14 @@ function BasicLayout({
   toggleTheme,
 }) {
   const appTheme = createMuiTheme(themes[theme]);
+
   console.log(appTheme);
 
   return (
     <MuiThemeProvider theme={appTheme}>
       <CssBaseline />
       <AppDrawer open={appDrawerOpen} onClose={closeDrawer} onOpen={openDrawer} />
-      <AppBar>
+      <AppBar className={classes.toolbar}>
         <Toolbar className={classes.toolbar}>
           <IconButton color="inherit" className={classes.menuIcon} onClick={openDrawer}>
             <MenuIcon />
@@ -86,7 +88,9 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withStyles(styles)(BasicLayout));
+export default withStyles(styles)(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(BasicLayout)
+);

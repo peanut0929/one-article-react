@@ -26,7 +26,8 @@ export const themes = {
         default: '#fafafa',
       },
       common: {
-        white: '#fff',
+        white: '#fffff',
+        black: '#000000',
       },
     },
     typography: {
@@ -48,10 +49,11 @@ export const themes = {
         default: '#333333',
       },
       text: {
-        primary: '#777',
+        primary: '#777777',
       },
       common: {
-        white: '#ddd',
+        white: '#dddddd',
+        black: '#dddddd',
       },
     },
     typography: {
