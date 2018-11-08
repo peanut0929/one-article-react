@@ -1,12 +1,16 @@
 import withStyles from '@material-ui/core/styles/withStyles';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import { themes } from '../../../utils';
 
-const styles = {
+const styles = theme => ({
   content: {
     fontSize: '1.2rem',
   },
-};
+  wc: {
+    marginTop: theme.spacing.unit,
+  },
+});
 
 const Article = ({ title, author, content, curr, wc, classes }) => {
   return (
@@ -24,8 +28,8 @@ const Article = ({ title, author, content, curr, wc, classes }) => {
         className={classes.content + ' article-content'}
       />
       <Divider />
-      <Typography align="center" gutterBottom>
-        {wc}
+      <Typography align="center" color="textPrimary" className={classes.wc} gutterBottom>
+        {wc}字
       </Typography>
     </div>
   );

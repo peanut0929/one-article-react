@@ -1,63 +1,46 @@
-import Grey from '@material-ui/core/colors/grey';
-import indigo from '@material-ui/core/colors/indigo';
-
 export const urls = {
   today: 'https://interface.meiriyiwen.com/article/today?dev=1',
   random: 'https://interface.meiriyiwen.com/article/random?dev=1',
-  date: 'https://interface.meiriyiwen.com/article/day?dev=1&date=',
+  date: 'https://interface.meiriyiwen.com/article/day?dev=1&date='
 };
 
 export const themes = {
   light: {
     palette: {
       primary: {
-        light: '#757ce8',
-        main: '#3f50b5',
-        dark: '#002884',
-        contrastText: '#fff',
+        main: '#3f50b5'
       },
       secondary: {
-        light: '#ff7961',
-        main: '#f44336',
-        dark: '#ba000d',
-        contrastText: '#000',
+        main: '#f44336'
       },
       background: {
         default: '#fafafa',
-      },
-      common: {
-        white: '#fffff',
-        black: '#000000',
-      },
+        paper: '#fff'
+      }
     },
     typography: {
-      useNextVariants: true,
-    },
+      useNextVariants: true
+    }
   },
   dark: {
     palette: {
       primary: {
-        main: '#212121',
+        main: '#2c2c2c'
       },
       secondary: {
-        light: '#ff7961',
-        main: '#f44336',
-        dark: '#ba000d',
-        contrastText: '#000',
+        main: '#852508'
       },
       background: {
         default: '#333333',
+        paper: '#333'
       },
       text: {
-        primary: '#777777',
+        primary: '#777777'
       },
-      common: {
-        white: '#dddddd',
-        black: '#dddddd',
-      },
+      divider: '#3b3b3b'
     },
     typography: {
-      useNextVariants: true,
-    },
-  },
+      useNextVariants: true
+    }
+  }
 };
