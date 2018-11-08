@@ -78,8 +78,6 @@ export default {
   subscriptions: {
     setup({ dispatch, history }) {
       history.listen(({ pathname, query }) => {
-        console.log(query);
-
         if (pathname === '/') {
           dispatch({
             type: 'fetchArticle',

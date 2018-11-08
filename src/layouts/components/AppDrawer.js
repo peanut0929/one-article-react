@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import TodayIcon from '@material-ui/icons/Today';
 import PrevIcon from '@material-ui/icons/FastRewind';
 import NextIcon from '@material-ui/icons/FastForward';
+import RandomIcon from '@material-ui/icons/AllInclusive';
 
 const styles = theme => ({
   listIcon: {
@@ -58,7 +59,7 @@ const AppDrawer = ({
         )}
         <ListItem onClick={getRandom}>
           <ListItemIcon className={classes.listIcon}>
-            <TodayIcon />
+            <RandomIcon />
           </ListItemIcon>
           <ListItemText>随机一天</ListItemText>
         </ListItem>
