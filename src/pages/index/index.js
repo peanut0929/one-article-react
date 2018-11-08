@@ -1,5 +1,5 @@
 /**
- * title: 每阅
+ * title: 早学
  */
 import { connect } from 'dva';
 import withStyles from '@material-ui/core/styles/withStyles';

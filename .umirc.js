@@ -8,16 +8,16 @@ export default {
       {
         antd: false,
         dva: {
-          immer: true,
+          immer: true
         },
         dynamicImport: true,
-        title: 'one-article-react',
+        title: '早学',
         dll: false,
         routes: {
-          exclude: [],
+          exclude: []
         },
-        hardSource: false,
-      },
-    ],
-  ],
+        hardSource: false
+      }
+    ]
+  ]
 };
