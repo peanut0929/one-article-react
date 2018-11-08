@@ -3,6 +3,7 @@
  */
 import { connect } from 'dva';
 import withStyles from '@material-ui/core/styles/withStyles';
+import Grid from '@material-ui/core/Grid';
 import Article from './components/Article';
 import Loading from './components/Loading';
 
@@ -23,8 +24,12 @@ const styles = theme => {
 const Index = ({ article, classes, loading }) => {
   return (
     <div className={classes.container}>
-      {loading && <Loading />}
-      {article && !loading && <Article {...article} />}
+      <Grid container justify="center">
+        <Grid item md={8}>
+          {loading && <Loading />}
+          {article && !loading && <Article {...article} />}
+        </Grid>
+      </Grid>
     </div>
   );
 };

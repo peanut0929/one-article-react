@@ -35,14 +35,14 @@ const AppDrawer = ({
   return (
     <SwipeableDrawer open={open} onClose={onClose} onOpen={onOpen}>
       <List className={classes.drawerList} onClick={onClose}>
-        <ListItem onClick={getPrev}>
+        <ListItem onClick={getPrev} button>
           <ListItemIcon className={classes.listIcon}>
             <PrevIcon />
           </ListItemIcon>
           <ListItemText>前一天</ListItemText>
         </ListItem>
         {!isToday && (
-          <ListItem onClick={getToday}>
+          <ListItem onClick={getToday} button>
             <ListItemIcon className={classes.listIcon}>
               <TodayIcon />
             </ListItemIcon>
@@ -50,14 +50,14 @@ const AppDrawer = ({
           </ListItem>
         )}
         {!isToday && (
-          <ListItem onClick={getNext}>
+          <ListItem onClick={getNext} button>
             <ListItemIcon className={classes.listIcon}>
               <NextIcon />
             </ListItemIcon>
             <ListItemText>后一天</ListItemText>
           </ListItem>
         )}
-        <ListItem onClick={getRandom}>
+        <ListItem onClick={getRandom} button>
           <ListItemIcon className={classes.listIcon}>
             <RandomIcon />
           </ListItemIcon>
