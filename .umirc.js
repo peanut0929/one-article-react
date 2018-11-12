@@ -1,8 +1,9 @@
-// ref: https://umijs.org/config/
 export default {
   mountElementId: 'app',
+  base: '/one-article-react/',
+  publicPath: '/one-article-react/',
+  history: 'hash',
   plugins: [
-    // ref: https://umijs.org/plugin/umi-plugin-react.html
     [
       'umi-plugin-react',
       {
@@ -10,13 +11,14 @@ export default {
         dva: {
           immer: true
         },
-        dynamicImport: true,
+        dynamicImport: false,
         title: '早学',
         dll: false,
         routes: {
           exclude: []
         },
-        hardSource: false
+        hardSource: false,
+        fastClick: true
       }
     ]
   ]
